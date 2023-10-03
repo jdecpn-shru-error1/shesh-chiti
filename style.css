@@ -1,0 +1,687 @@
+@import url('https://cdn.rawgit.com/sh4hids/bangla-web-fonts/lal-sabuj-normal/stylesheet.css');
+@import url('https://fonts.googleapis.com/css?family=Galada');
+@import url('https://cdn.rawgit.com/sh4hids/bangla-web-fonts/bensen-handwriting/stylesheet.css');
+b{
+  font-size: 18px !important;
+  font-family: 'LalSabujNormal' !important;
+  line-height: 23px;
+}
+i, em{
+  font-size: 18px !important;
+  font-family: 'Galada', cursive !important;
+}
+p{
+  font-size: 18px !important;
+}
+.otherFontSize{
+font-size: 18px !important;
+text-align: start;
+}
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.box:not(i) {
+  font-family: 'BenSenHandwriting';
+	color: #ffffff;
+}
+body{
+  font-family: 'BenSenHandwriting' !important;
+	background-color: #02070d;
+}
+.timerHeight {
+  height: 90vh;
+}
+.box {
+	position: absolute;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+  top: 45%;
+  left: 50%;
+}
+.container {
+	width: 320px;
+}
+.clock {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+	padding: 50px 25px;
+	-webkit-box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+	border-radius: 8px;
+}
+
+.shape1 {
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	background: -o-linear-gradient(315deg, #ff5b84, #eb3461);
+	background: linear-gradient(135deg, #ff5b84, #eb3461);
+	border-radius: 50%;
+	top: 85px;
+  right: 0px;
+	z-index: -1;
+}
+.shape2 {
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	background: -o-linear-gradient(315deg, #426cf8, #3ebdf0);
+	background: linear-gradient(135deg, #426cf8, #3ebdf0);
+	border-radius: 50%;
+  bottom: -14px;
+  left: 0;
+	z-index: -1;
+}
+
+.wrapper {
+	text-align: center;
+}
+#time {
+	font-size: 40px;
+	display: inline-block;
+}
+#day {
+	position: relative;
+	font-size: 16px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #c5c5c5;
+	text-align: center;
+}
+#midday {
+	display: inline-block;
+	font-size: 30px;
+}
+a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 18px;
+	background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+	padding: 10px 0;
+	margin-top: 20px;
+	-webkit-box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+	border-radius: 8px;
+}
+i.fab {
+  color: #ff0000;
+}
+
+
+/* ============================== */
+
+
+.otehr {
+  /* background: linear-gradient(to right, #917173, #2a3b36, #432c52); */
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader::before {
+  content: "";
+  background: rgb(246 241 166 / 27%);
+  backdrop-filter: blur(8px);
+  position: absolute;
+  width: 140px;
+  height: 55px;
+  z-index: 20;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.274);
+  border-top: none;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.082);
+  animation: anim2 2s infinite;
+}
+
+.loader div {
+  background: rgb(228, 228, 228);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  animation: anim 2s infinite linear;
+  animation-delay: calc(-0.3s * var(--i));
+  transform: translateY(5px);
+  margin: 0.2em;
+}
+
+@keyframes anim {
+  0%,
+  100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-65px);
+  }
+}
+
+@keyframes anim2 {
+  0%,
+  100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+
+/* ======================= */
+/* ======================= */
+
+
+
+.extraTest{
+  position: relative;
+  z-index: -7;
+  top: 51%;
+  margin: 0 10px;
+}
+:root{
+--angle: 45deg;
+--opacity: 2;
+}
+
+.rainbow {
+width: 100%;
+height: auto;
+border-radius: 10px;
+padding: 1.3rem;
+margin: auto;
+display: grid;
+place-content: center;
+text-align: center;
+font-size: 1.5em;
+--border-size: 0.3rem;
+border: var(--border-size) dotted transparent;
+background-image: linear-gradient(
+    to right,
+    rgb(255 255 255 / var(--opacity)),
+    rgb(255 255 255 / var(--opacity))
+  ),
+  conic-gradient(
+    from var(--angle),
+    #d53e33 0deg 90deg,
+    #fbb300 90deg 180deg,
+    #114dbe 180deg 270deg,
+    #1f7636 270deg 360deg
+  );
+background-origin: border-box;
+background-clip: padding-box, border-box;
+}
+
+/* Animate when Houdini is available */
+@supports (background: paint(houdini)) {
+@property --opacity {
+  syntax: "<number>";
+  initial-value: 0.5;
+  inherits: false;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes opacityChange {
+  to {
+    --opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.rainbow {
+  animation: rotate 4s linear infinite, opacityChange 3s infinite alternate;
+}
+}
+/* ========================== */
+
+
+.myCreateTime {
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  padding: 10px 0;
+  margin-bottom: 20px !important;
+  -webkit-box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+}
+
+
+/* hr anuimation */
+hr{
+  display:block;
+  margin:5px auto;
+  height:15px;
+  width:100%;
+  border:none;
+  border-radius: 3px;
+  border-left:15px solid #f00000;
+  border-right:15px solid #300000;
+  animation: KITTAnim 1s infinite ease-in-out alternate;
+}
+
+hr:before{
+  content:" ";
+  display:inline-block;
+  width:100vw;
+  height:15px;
+  border-left:15px solid #c00000;
+  border-right:15px solid #600000;
+  animation: KITTAnimBefore 1s infinite ease-in-out alternate;
+}
+
+hr:after{
+  content:" ";
+  display:inline-block;
+  width:100vw;
+  height:15px;
+  border-left:15px solid #300000;
+  background-color:#300000;
+  border-right:15px solid #300000;
+  animation: KITTAnimAfter 1s infinite ease-in-out alternate;
+}
+
+hr:nth-child(even)
+{
+  animation: KARRAnim 1s infinite ease-in-out alternate;
+}
+
+hr:nth-child(even):after
+{
+  animation: KARRAnimAfter 1s infinite ease-in-out alternate;
+}
+
+hr:nth-child(even):before
+{
+  animation: KARRAnimBefore 1s infinite ease-in-out alternate;
+}
+
+/**
+    Keyframes
+Do not try at home
+
+**/
+
+
+@keyframes KITTAnim {
+   0% {
+      background-color:#300000;
+      border-left:15px solid #f00000;
+      border-right:15px solid #300000;
+   }
+   10% {
+      background-color:#300000;
+      border-left:15px solid #f00000;
+      border-right:15px solid #300000;
+   }
+   20% {
+      background-color:#300000;
+      border-left:15px solid #c00000;
+      border-right:15px solid #300000;
+   }
+   30% {
+      background-color:#300000;
+      border-left:15px solid #a00000;
+      border-right:15px solid #300000;
+   }
+   40% {
+      background-color:#300000;
+      border-left:15px solid #600000;
+      border-right:15px solid #300000;
+   }
+   50% {
+      background-color:#600000;
+      border-left:15px solid #300000;
+      border-right:15px solid #300000;
+   }
+   60% {
+      background-color:#a00000;
+      border-left:15px solid #300000;
+      border-right:15px solid #600000;
+   }
+   70% {
+      background-color:#c00000;
+      border-left:15px solid #300000;
+      border-right:15px solid #a00000;
+   }
+   80% {
+      background-color:#f00000;
+      border-left:15px solid #300000;
+      border-right:15px solid #c00000;
+   }
+   90% {
+      background-color:#c00000;
+      border-left:15px solid #300000;
+      border-right:15px solid #f00000;
+   }
+   100% {
+      background-color:#c00000;
+      border-left:15px solid #300000;
+      border-right:15px solid #f00000;
+   }
+}
+
+@keyframes KITTAnimBefore {
+   0% {
+      background-color:#a00000;
+      border-left:15px solid #c00000;
+      border-right:15px solid #600000;
+   }
+   10% {
+      background-color:#a00000;
+      border-left:15px solid #c00000;
+      border-right:15px solid #600000;
+   }
+   20% {
+      background-color:#c00000;
+      border-left:15px solid #f00000;
+      border-right:15px solid #a00000;
+   }
+   30% {
+      background-color:#f00000;
+      border-left:15px solid #c00000;
+      border-right:15px solid #c00000;
+   }
+   40% {
+      background-color:#c00000;
+      border-left:15px solid #a00000;
+      border-right:15px solid #f00000;
+   }
+   50% {
+      background-color:#a00000;
+      border-left:15px solid #600000;
+      border-right:15px solid #c00000;
+   }
+   60% {
+      background-color:#600000;
+      border-left:15px solid #300000;
+      border-right:15px solid #a00000;
+   }
+   70% {
+      background-color:#300000;
+      border-left:15px solid #300000;
+      border-right:15px solid #600000;
+   }
+   80% {
+      background-color:#300000;
+      border-left:15px solid #300000;
+      border-right:15px solid #300000;
+   }
+   90% {
+      background-color:#300000;
+      border-left:15px solid #300000;
+      border-right:15px solid #300000;
+   }
+   100% {
+      background-color:#300000;
+      border-left:15px solid #300000;
+      border-right:15px solid #300000;
+   }
+}
+
+@keyframes KITTAnimAfter {
+   0% {
+      background-color:#300000;
+      border-left:15px solid #300000;
+      border-right:15px solid #300000;
+   }
+   10% {
+      background-color:#300000;
+      border-left:15px solid #300000;
+      border-right:15px solid #300000;
+   }
+   20% {
+      background-color:#300000;
+      border-left:15px solid #600000;
+      border-right:15px solid #300000;
+   }
+   30% {
+      background-color:#600000;
+      border-left:15px solid #a00000;
+      border-right:15px solid #300000;
+   }
+   40% {
+      background-color:#a00000;
+      border-left:15px solid #c00000;
+      border-right:15px solid #600000;
+   }
+   50% {
+      background-color:#c00000;
+      border-left:15px solid #f00000;
+      border-right:15px solid #a00000;
+   }
+   60% {
+      background-color:#f00000;
+      border-left:15px solid #c00000;
+      border-right:15px solid #c00000;
+   }
+   70% {
+      background-color:#c00000;
+      border-left:15px solid #a00000;
+      border-right:15px solid #f00000;
+   }
+   80% {
+      background-color:#a00000;
+      border-left:15px solid #600000;
+      border-right:15px solid #c00000;
+   }
+   90% {
+      background-color:#600000;
+      border-left:15px solid #300000;
+      border-right:15px solid #a00000;
+   }
+   100% {
+      background-color:#600000;
+      border-left:15px solid #300000;
+      border-right:15px solid #a00000;
+   }
+}
+@keyframes KARRAnim {
+   0% {
+      background-color:#333300;
+      border-left:15px solid #ffff00;
+      border-right:15px solid #333300;
+   }
+   10% {
+      background-color:#333300;
+      border-left:15px solid #ffff00;
+      border-right:15px solid #333300;
+   }
+   20% {
+      background-color:#333300;
+      border-left:15px solid #cccc00;
+      border-right:15px solid #333300;
+   }
+   30% {
+      background-color:#333300;
+      border-left:15px solid #808000;
+      border-right:15px solid #333300;
+   }
+   40% {
+      background-color:#333300;
+      border-left:15px solid #4c4c00;
+      border-right:15px solid #333300;
+   }
+   50% {
+      background-color:#4c4c00;
+      border-left:15px solid #333300;
+      border-right:15px solid #333300;
+   }
+   60% {
+      background-color:#808000;
+      border-left:15px solid #333300;
+      border-right:15px solid #4c4c00;
+   }
+   70% {
+      background-color:#cccc00;
+      border-left:15px solid #333300;
+      border-right:15px solid #808000;
+   }
+   80% {
+      background-color:#ffff00;
+      border-left:15px solid #333300;
+      border-right:15px solid #cccc00;
+   }
+   90% {
+      background-color:#cccc00;
+      border-left:15px solid #333300;
+      border-right:15px solid #ffff00;
+   }
+   100% {
+      background-color:#cccc00;
+      border-left:15px solid #333300;
+      border-right:15px solid #ffff00;
+   }
+}
+
+@keyframes KARRAnimBefore {
+   0% {
+      background-color:#808000;
+      border-left:15px solid #cccc00;
+      border-right:15px solid #4c4c00;
+   }
+   10% {
+      background-color:#808000;
+      border-left:15px solid #cccc00;
+      border-right:15px solid #4c4c00;
+   }
+   20% {
+      background-color:#cccc00;
+      border-left:15px solid #ffff00;
+      border-right:15px solid #808000;
+   }
+   30% {
+      background-color:#ffff00;
+      border-left:15px solid #cccc00;
+      border-right:15px solid #cccc00;
+   }
+   40% {
+      background-color:#cccc00;
+      border-left:15px solid #808000;
+      border-right:15px solid #ffff00;
+   }
+   50% {
+      background-color:#808000;
+      border-left:15px solid #4c4c00;
+      border-right:15px solid #cccc00;
+   }
+   60% {
+      background-color:#4c4c00;
+      border-left:15px solid #333300;
+      border-right:15px solid #808000;
+   }
+   70% {
+      background-color:#333300;
+      border-left:15px solid #333300;
+      border-right:15px solid #4c4c00;
+   }
+   80% {
+      background-color:#333300;
+      border-left:15px solid #333300;
+      border-right:15px solid #333300;
+   }
+   90% {
+      background-color:#333300;
+      border-left:15px solid #333300;
+      border-right:15px solid #333300;
+   }
+   100% {
+      background-color:#333300;
+      border-left:15px solid #333300;
+      border-right:15px solid #333300;
+   }
+}
+
+@keyframes KARRAnimAfter {
+   0% {
+      background-color:#333300;
+      border-left:15px solid #333300;
+      border-right:15px solid #333300;
+   }
+   10% {
+      background-color:#333300;
+      border-left:15px solid #333300;
+      border-right:15px solid #333300;
+   }
+   20% {
+      background-color:#333300;
+      border-left:15px solid #4c4c00;
+      border-right:15px solid #333300;
+   }
+   30% {
+      background-color:#4c4c00;
+      border-left:15px solid #808000;
+      border-right:15px solid #333300;
+   }
+   40% {
+      background-color:#808000;
+      border-left:15px solid #cccc00;
+      border-right:15px solid #4c4c00;
+   }
+   50% {
+      background-color:#cccc00;
+      border-left:15px solid #ffff00;
+      border-right:15px solid #808000;
+   }
+   60% {
+      background-color:#ffff00;
+      border-left:15px solid #cccc00;
+      border-right:15px solid #cccc00;
+   }
+   70% {
+      background-color:#cccc00;
+      border-left:15px solid #808000;
+      border-right:15px solid #ffff00;
+   }
+   80% {
+      background-color:#808000;
+      border-left:15px solid #4c4c00;
+      border-right:15px solid #cccc00;
+   }
+   90% {
+      background-color:#4c4c00;
+      border-left:15px solid #333300;
+      border-right:15px solid #808000;
+   }
+   100% {
+      background-color:#4c4c00;
+      border-left:15px solid #333300;
+      border-right:15px solid #808000;
+   }
+}
