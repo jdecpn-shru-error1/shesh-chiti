@@ -1,5 +1,6 @@
 @import url('https://cdn.rawgit.com/sh4hids/bangla-web-fonts/lal-sabuj-normal/stylesheet.css');
 @import url('https://fonts.googleapis.com/css?family=Galada');
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
 @import url('https://cdn.rawgit.com/sh4hids/bangla-web-fonts/bensen-handwriting/stylesheet.css');
 b{
   font-size: 18px !important;
@@ -17,6 +18,30 @@ p{
 font-size: 18px !important;
 text-align: start;
 }
+.eti{
+   color: white;
+   position: relative;
+}
+.etiTest{
+   position: absolute;
+   top: 20px;
+   right: 40px;
+}
+
+.etiTest span:nth-child(1){
+   font-family: 'LalSabujNormal' !important;
+   font-size: 30px;
+   font-weight: 900;
+}
+.etiTest span:nth-child(2){
+  font-family: 'BenSenHandwriting' !important;
+  font-size: 15px;
+}
+.etiTest span:nth-child(3){
+  font-family: 'Galada', cursive !important;
+  font-size: 30px;
+}
+
 *,
 *:before,
 *:after {
@@ -224,10 +249,10 @@ background-image: linear-gradient(
   ),
   conic-gradient(
     from var(--angle),
-    #d53e33 0deg 90deg,
+    #d72013 0deg 90deg,
     #fbb300 90deg 180deg,
-    #114dbe 180deg 270deg,
-    #1f7636 270deg 360deg
+    #014dda 180deg 270deg,
+    #02ac2f 270deg 360deg
   );
 background-origin: border-box;
 background-clip: padding-box, border-box;
@@ -684,4 +709,11 @@ Do not try at home
       border-left:15px solid #333300;
       border-right:15px solid #808000;
    }
+}
+
+
+
+/* ===================== */
+#background-audio{
+   display: none;
 }
