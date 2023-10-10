@@ -40,3 +40,9 @@ let clock = setInterval(
 
 	1000
 );
+// ================
+
+window.onload = function() {
+	var audio = document.getElementById("background-audio");
+	audio.play();
+}
